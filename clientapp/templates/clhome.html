@@ -1,0 +1,413 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>vani diam</title>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="{% static 'scenic/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'scenic/css/font-awesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'scenic/css/magnific-popup.css' %}">
+
+<link rel="stylesheet" href="{% static 'scenic/css/owl.theme.css' %}">
+<link rel="stylesheet" href="{% static 'scenic/css/owl.carousel.css' %}">
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="{% static 'scenic/css/tooplate-style.css' %}">
+
+
+
+        <meta charset="utf-8">
+        <title>VANI DIAM BV</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="VANI DIAM BV" name="keywords">
+        <meta content="VANI DIAM BV" name="description">
+
+        <!-- Favicon -->
+        <link href="{% static 'asset/img/favicon.ico' %}" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="{ % static 'asset/lib/animate/animate.min.css' % }" rel="stylesheet">
+        <link href= "{% static 'asset/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href=" {% static 'asset/css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+
+<!-- PRE LOADER -->
+<div class="preloader">
+     <div class="spinner">
+          <span class="sk-inner-circle"></span>
+     </div>
+</div>
+
+<!-- Top Bar Start -->
+<div class="top-bar d-none d-md-block">
+     <div class="container-fluid">
+         <div class="row">
+             <div class="col-md-8">
+                 <div class="top-bar-left">
+                     <div class="text">
+                         <i class="far fa-clock"></i>
+                         <h2>8:00 am - 6:00 pm</h2>
+                         <p>Mon - Fri</p>
+                     </div>
+                     <div class="text">
+                         <i class="fa fa-phone-alt"></i>
+                         <h2>+123 456 7890</h2>
+                         <p>For Appointment</p>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-md-4">
+                 <div class="top-bar-right">
+                     <div class="social">
+                         <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                         <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                         <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                         <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ <!-- Top Bar End -->
+
+ <!-- Nav Bar Start -->
+ <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+     <div class="container-fluid">
+         <a href="{%url 'clhome'%}" class="navbar-brand">VANI DIAM </a>
+         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+             <span class="navbar-toggler-icon"></span>
+         </button>
+
+         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+             <div class="navbar-nav ml-auto">
+                 <a href="{%url 'clhome'%}"class="nav-item nav-link active">Home</a>
+                 <a href="{%url 'clabout'%}" class="nav-item nav-link ">About</a>
+
+                 {% if request.session.clemail%}
+                 <a href="{%url 'collection'%}"class="nav-item nav-link">collection</a>
+                  {% endif %}
+                 <div class="nav-item dropdown">
+                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                     <div class="dropdown-menu">
+                         <a href="{%url 'blog'%}" class="dropdown-item">Blog Page</a>
+                         <a href="{%url 'single'%}"class="dropdown-item">Single Page</a>
+                     </div>
+                 </div>
+                 
+                 <a href="{% url 'clregister'%}" class="nav-item nav-link">Register</a>
+                 <a href="{%url 'contact'%}" class="nav-item nav-link">Contact</a>
+             </div>
+         </div>
+     </div>
+ </div>
+ <!-- Nav Bar End -->
+
+
+
+<!-- HOME -->
+<section id="home" class="parallax-section">
+     <div class="overlay">
+          <br><br>
+          <br><br><br><br><br>
+
+          <div style="float: right; margin-right: 90px;" >
+          <ul class="section-btn">
+               <a href="" class="smoothScroll"><span data-hover="Client Login">Client Login </span></a>
+               <a href="" class="smoothScroll"><span data-hover="Internal Login ">Internal Login </span></a>
+          </ul>
+          </div></div>
+     <div class="container">
+              
+          <div class="row">
+               
+
+               <div class="col-md-8 col-sm-12">
+                    <div class="home-text">
+                         <h1>OUR VALUES DEFINES OUR ACTION!</h1>
+                         
+                         <p>Maintain an ethical diamond manufacturing in the interest of our people and the industry, through the most responsible decisions.</p>
+                      
+                         <ul class="section-btn">
+                              <a href="#about" class="smoothScroll"><span data-hover="Discover More">Discover More</span></a>
+                         </ul>
+                         
+                    </div>
+               </div>
+
+          </div>
+     </div>
+     
+     
+     <!-- Video -->
+     <video controls autoplay loop muted>
+          <source src="{% static 'scenic/videos/production ID_5106444.mp4' %}" type="video/mp4">
+          Your browser does not support the video tag.
+     </video>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="parallax-section">
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-offset-1 col-md-10 col-sm-12">
+                    <div class="about-info">
+                         <h3>Introducing Scenic</h3>
+                         <h1>This template is designed for you. Sed ornare, tortor nec placerat lacinia, leo quam rutrum leo, eget posuere ipsum sem eu justo. Integer nunc libero.</h1>
+                    </div>
+               </div>
+
+          </div>
+     </div>
+</section>
+
+
+<!-- PROJECT -->
+<section id="project" class="parallax-section">
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-6 col-sm-6">
+                    <!-- PROJECT ITEM -->
+                    <div class="project-item">
+                         <a href="{% static 'scenic/images/project-image1.jpg' %}" class="image-popup">
+                              <img src="{% static 'scenic/images/project-image1.jpg' %}" class="img-responsive" alt="">
+                         
+                              <div class="project-overlay">
+                                   <div class="project-info">
+                                        <h1>Beautiful Women</h1>
+                                        <h3>Click to pop up!</h3>
+                                   </div>
+                              </div>
+                         </a>
+                    </div>
+               </div>
+
+               <div class="col-md-6 col-sm-6">
+                    <!-- PROJECT ITEM -->
+                    <div class="project-item">
+                         <a href="{% static 'scenic/images/project-image2.jpg' %}" class="image-popup">
+                              <img src="{% static 'scenic/images/project-image2.jpg' %}" class="img-responsive" alt="">
+                         
+                              <div class="project-overlay">
+                                   <div class="project-info">
+                                        <h1>Nulla efficitur quam</h1>
+                                        <h3>Sed ligula accumsan</h3>
+                                   </div>
+                              </div>
+                         </a>
+                    </div>
+               </div>
+
+               <div class="col-md-6 col-sm-6">
+                    <!-- PROJECT ITEM -->
+                    <div class="project-item">
+                         <a href="images/project-image3.jpg" class="image-popup">
+                              <img src="images/project-image3.jpg" class="img-responsive" alt="">
+                         
+                              <div class="project-overlay">
+                                   <div class="project-info">
+                                        <h1>Large Sea Wave</h1>
+                                        <h3>Nam feugiat dui in nisi</h3>
+                                   </div>
+                              </div>
+                         </a>
+                    </div>
+               </div>
+
+               <div class="col-md-6 col-sm-6">
+                    <!-- PROJECT ITEM -->
+                    <div class="project-item">
+                         <a href="images/project-image4.jpg" class="image-popup">
+                              <img src="images/project-image4.jpg" class="img-responsive" alt="">
+                         
+                              <div class="project-overlay">
+                                   <div class="project-info">
+                                        <h1>Lorem ipsum dolor</h1>
+                                        <h3>Mollis aliquam faucibus urna</h3>
+                                   </div>
+                              </div>
+                         </a>
+                    </div>
+               </div>               
+
+          </div>
+     </div>
+</section>
+
+
+
+<!-- CONTACT -->
+<section id="contact" class="parallax-section">
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-offset-3 col-md-6 col-sm-12">
+                    <div class="section-title">
+                         <h1>Talk to us!</h1>
+                    </div>
+               </div>
+
+               <div class="clearfix"></div>
+
+               <div class="col-md-offset-2 col-md-8 col-sm-12">
+                    <!-- CONTACT FORM HERE -->
+                    <form id="contact-form" action="#" method="get" role="form">
+
+                         <!-- IF MAIL SENT SUCCESSFULLY -->
+                         <h6 class="text-success">Your message has been sent successfully. </h6>
+                         
+                         <!-- IF MAIL SENDING UNSUCCESSFULL -->
+                         <h6 class="text-danger">E-mail must be valid and message must be longer than 1 character.</h6>
+
+                         <div class="col-md-6 col-sm-6">
+                              <input type="text" class="form-control" id="cf-name" name="cf-name" placeholder="Name">
+                         </div>
+
+                         <div class="col-md-6 col-sm-6">
+                              <input type="email" class="form-control" id="cf-email" name="cf-email" placeholder="Email Address">
+                         </div>
+
+                         <div class="col-md-12 col-sm-12">
+                              <input type="text" class="form-control" id="cf-subject" name="subject" placeholder="Subject">
+                              <textarea class="form-control" rows="5" id="cf-message" name="cf-message" placeholder="Message"></textarea>
+                         </div>
+
+                         <div class="col-md-offset-4 col-md-4 col-sm-offset-4 col-sm-4">
+                              <div class="section-btn">
+                                   <button type="submit" class="form-control" id="cf-submit" name="submit"><span data-hover="Send Message">Send Message</span></button>
+                              </div>
+                         </div>
+                    </form>
+               </div>
+
+          </div>
+     </div>
+</section>
+
+<!-- Footer Start -->
+<div class="footer">
+     <div class="container">
+         <div class="row">
+             <div class="col-lg-7">
+                 <div class="row">
+                     <div class="col-md-6">
+                         <div class="footer-contact">
+                             <h2>Our Head Office</h2>
+                             <p><i class="fa fa-map-marker-alt"></i>Belgiëlei,  67,   bus 2, 2018 </p>
+                             <p><i class="fa fa-map-marker-alt"></i>Antwerpen, Belgium</p>
+                             <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
+                             <p><i class="fa fa-envelope"></i>info@example.com</p>
+                             <div class="footer-social">
+                                 <a href=""><i class="fab fa-twitter"></i></a>
+                                 <a href=""><i class="fab fa-facebook-f"></i></a>
+                                 <a href=""><i class="fab fa-youtube"></i></a>
+                                 <a href=""><i class="fab fa-instagram"></i></a>
+                                 <a href=""><i class="fab fa-linkedin-in"></i></a>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="col-md-6">
+                         <div class="footer-link">
+                             <h2>Quick Links</h2>
+                             <a href="">Terms of use</a>
+                             <a href="">Privacy policy</a>
+                             <a href="">Cookies</a>
+                             <a href="">Help</a>
+                             <a href="">FQAs</a>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-5">
+                 <div class="footer-newsletter">
+                     <h2>Newsletter</h2>
+                     <p>
+                         Lorem ipsum dolor sit amet elit. Quisque eu lectus a leo dictum nec non quam. Tortor eu placerat rhoncus, lorem quam iaculis felis, sed lacus neque id eros.
+                     </p>
+                     <div class="form">
+                         <input class="form-control" placeholder="Email goes here">
+                         <button class="btn">Submit</button>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <div class="container copyright">
+         <div class="row">
+             <div class="col-md-6">
+                 <p>&copy; <a href="#">VANI DIAM BV </a>, All Right Reserved.</p>
+             </div>
+             <div class="col-md-6">
+                 <p>Designed By <a href="https://htmlcodex.com">Girish</a></p>
+             </div>
+         </div>
+     </div>
+ </div>
+ <!-- Footer End -->
+
+ <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="{% static 'asset/lib/easing/easing.min.js'%}"></script>
+        <script src="{% static 'asset/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'asset/lib/waypoints/waypoints.min.js' %} "></script>
+        <script src="{% static 'asset/lib/counterup/counterup.min.js' %}"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="{% static 'asset/mail/jqBootstrapValidation.min.js' %}"></script>
+        <script src="{% static 'asset/mail/contact.js' %}"></script>
+
+        <!-- Template Javascript -->
+        <script src=" {% static 'asset/js/main.js' %}"></script>
+
+ <!-- JavaScript Libraries -->
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+ <script src="{% static 'asset/lib/easing/easing.min.js'%}"></script>
+ <script src="{% static 'asset/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+ <script src="{% static 'asset/lib/waypoints/waypoints.min.js' %} "></script>
+ <script src="{% static 'asset/lib/counterup/counterup.min.js' %}"></script>
+ 
+ <!-- Contact Javascript File -->
+ <script src="{% static 'asset/mail/jqBootstrapValidation.min.js' %}"></script>
+ <script src="{% static 'asset/mail/contact.js' %}"></script>
+
+ <!-- Template Javascript -->
+ <script src=" {% static 'asset/js/main.js' %}"></script>
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+<!-- SCRIPTS -->
+<script src="{% static 'scenic/js/jquery.js' %}"></script>
+<script src="{% static 'scenic/js/bootstrap.min.js'%}"></script>
+<script src="{% static 'scenic/js/jquery.parallax.js'%}"></script>
+<script src="{% static 'scenic/js/owl.carousel.min.js'%}"></script>
+<script src="{% static 'scenic/js/jquery.magnific-popup.min.js'%}"></script>
+<script src="{% static 'scenic/js/magnific-popup-options.js'%}"></script>
+<script src="{% static 'scenic/js/modernizr.custom.js'%}"></script>
+<script src="{% static 'scenic/js/smoothscroll.js'%}"></script>
+<script src="{% static 'scenic/js/custom.js'%}"></script>
+
+</body>
+</html>

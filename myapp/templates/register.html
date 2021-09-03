@@ -1,0 +1,220 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>VANI DIAM BV</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="VANI DIAM BV" name="keywords">
+        <meta content="VANI DIAM BV" name="description">
+
+        <!-- Favicon -->
+        <link href="{% static 'asset/img/favicon.ico' %}" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="{% static 'asset/lib/animate/animate.min.css' %}" rel="stylesheet">
+        <link href="{% static 'asset/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="{% static 'asset/css/style.css' %}" rel="stylesheet">
+
+          <!-- register head-->
+          <meta charset="utf-8">
+          <title>Form-v9 by Colorlib</title>
+          <!-- Mobile Specific Metas -->
+          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+          <!-- Font-->
+          <link rel="stylesheet" type="text/css" href="{% static 'asset/registration/css/nunito-font.css' %}">
+          <!-- Main Style Css -->
+          <link rel="stylesheet" href="{% static 'asset/registration/css/style.css' %}"/>
+
+    </head>
+
+    <body class="page">
+        <!-- Top Bar Start -->
+        <div class="top-bar d-none d-md-block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="top-bar-left">
+                            <div class="text">
+                                <i class="far fa-clock"></i>
+                                <h2>8:00 - 9:00</h2>
+                                <p>Mon - Fri</p>
+                            </div>
+                            <div class="text">
+                                <i class="fa fa-phone-alt"></i>
+                                <h2>+123 456 7890</h2>
+                                <p>For Appointment</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="top-bar-right">
+                            <div class="social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Bar End -->
+
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a href="{%url 'home'%}" class="navbar-brand">VANI DIAM</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="{%url 'home'%}" class="nav-item nav-link">Home</a>
+                        <a href="{%url 'about'%}" class="nav-item nav-link">About</a>
+                        <a href="{%url 'collection'%}"" class="nav-item nav-link">collection</a>
+                        <a href="{%url 'register'%}" class="nav-item nav-link active">register</a>
+                        
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu">
+                                <a href=""{%url 'home'%} class="dropdown-item">Blog Page</a>
+                                <a href=""{%url 'home'%}" class="dropdown-item">Single Page</a>
+                            </div>
+                        </div>
+                        <a href="{%url 'contact'%}" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+
+
+        <!-- register Start -->
+        <body class="form-v9">
+            <div class="page-content">
+                <div class="form-v9-content" style="background-image: url('images/form-v9.jpg')">
+                    <form class="form-detail" action="{%url 'register'%}" method="POST">
+                        {% csrf_token%}
+                        <h2>Registration Form</h2>
+                        <div class="form-row-total">
+                            <div class="form-row">
+                                <input type="text" name="full-name" id="full-name" class="input-text" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-row">
+                                <input type="text" name="email" id="your-email" class="input-text" placeholder="Your Email" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}">
+                            </div>
+                        </div>
+                        <div class="form-row-total">
+                            <div class="form-row">
+                                <input type="mobile" name="mobile" id="mobile" class="input-text" placeholder="mobile number" required>
+                            </div>
+                            <div class="form-row">
+                                <input type="address" name="address" id="address" class="input-text" placeholder="address" >
+                            </div>
+                        </div>
+                        <div class="form-row-total">
+                            <div class="form-row">
+                                <input type="password" name="password" id="password" class="input-text" placeholder="Your Password" required>
+                            </div>
+                            <div class="form-row">
+                                <input type="password" name="confpassword" id="comfirm-password" class="input-text" placeholder="Confirm Password" required>
+                            </div>
+                        </div>
+                        <div class="form-row-last">
+                            <input type="submit" name="register" class="register" value="Register">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+        <!-- Testimonial End -->
+
+
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="footer-contact">
+                                    <h2>Our Head Office</h2>
+                                    <p><i class="fa fa-map-marker-alt"></i>123 Street, New York, USA</p>
+                                    <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
+                                    <p><i class="fa fa-envelope"></i>info@example.com</p>
+                                    <div class="footer-social">
+                                        <a href=""><i class="fab fa-twitter"></i></a>
+                                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                                        <a href=""><i class="fab fa-youtube"></i></a>
+                                        <a href=""><i class="fab fa-instagram"></i></a>
+                                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="footer-link">
+                                    <h2>Quick Links</h2>
+                                    <a href="">Terms of use</a>
+                                    <a href="">Privacy policy</a>
+                                    <a href="">Cookies</a>
+                                    <a href="">Help</a>
+                                    <a href="">FQAs</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="footer-newsletter">
+                            <h2>Newsletter</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet elit. Quisque eu lectus a leo dictum nec non quam. Tortor eu placerat rhoncus, lorem quam iaculis felis, sed lacus neque id eros.
+                            </p>
+                            <div class="form">
+                                <input class="form-control" placeholder="Email goes here">
+                                <button class="btn">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; <a href="#">Your Site Name</a>, All Right Reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="{% static 'asset/lib/easing/easing.min.js' %}"></script>
+        <script src="{% static 'asset/lib/owlcarousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'asset/lib/waypoints/waypoints.min.js' %}"></script>
+        <script src="{% static 'asset/lib/counterup/counterup.min.js' %}"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="{% static 'asset/mail/jqBootstrapValidation.min.js' %}"></script>
+        <script src="{% static 'asset/mail/contact.js' %}"></script>
+
+        <!-- Template Javascript -->
+        <script src="{% static 'asset/js/main.js' %}"></script>
+    </body>
+</html>
