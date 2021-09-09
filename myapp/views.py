@@ -6,7 +6,7 @@ from django.conf import settings
 from django.core.mail import send_mail
 from random import randrange
 
-from .models import User,Event
+from .models import User,Event, product
 
 
 # Create your views here.
@@ -106,7 +106,8 @@ def fpassword2(request):
             msg="OTP Does not matched"
             return render(request,'fpassword2.html',{'msg':msg,'otp':otp, 'email': email})
 
-    else: return render(request, 'fpassword2.html',{'otp':otp, 'email':email})
+    else:
+         return render(request, 'fpassword2.html',{'otp':otp, 'email':email})
 
 def fpassword3(request):
     if request.method == "POST":
@@ -204,7 +205,7 @@ def add_event(request):
                 etitle= request.POST['etitle'],
                 edate = request.POST['edate'],
                 edis= request.POST['edis'],
-                epic= request.FILES['epic']
+            epic= request.FILES['epic']
             )
         else: 
             Event.objects.create(
@@ -246,5 +247,34 @@ def delete_event(request,pk):
     uid= User.objects.get(email=request.session['email'])
     events= Event.objects.all()
     return render(request,'all-events.html',{'events':events,'uid':uid})
+
+
+def add_pd(request):
+    uid=User.objects.get(email=request.session['email'])
+    if request.method=="POST": 
+        if 'pdimage' in request.FILES:
+            product.objects.create(
+                pdname= request.POST['pdname'],
+                pdprice= request.POST['pdprice'],
+                pddis=request.POST['pddis'],
+                pdimage=request.FILES['pdimage'],
+            
+
+            )
+        else: 
+            product.objects.create(
+                pdname= request.POST['pdname'],
+                pdprice= request.POST['pdprice'],
+                pddis=request.POST['pddis'],
+         
+                )
+
+        msg={"Product Added Succesfully"}
+        return render(request, "add-pd.html", {'msg':msg, 'uid':uid})
+    
+    else: 
+        return render(request,'add-pd.html', {'uid':uid})
+
+
 
     

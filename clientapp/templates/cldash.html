@@ -102,8 +102,7 @@
                  <a href="{%url 'clabout'%}" class="nav-item nav-link ">About</a>
 
                 {% if request.session.clemail %}
-
-                 <a href="{% url 'clcollection' %}"class="nav-item nav-link">collection</a>
+                 <a href="{%url 'clcollection'%}"class="nav-item nav-link">collection</a>
                  
                  <div class="nav-item dropdown">
                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
@@ -115,8 +114,34 @@
                  <a href="{%url 'clcontact'%}" class="nav-item nav-link">Contact</a>
 
                  {% endif %}
-                 
                  <a href="{% url 'clregister'%}" class="nav-item nav-link">Register</a>
+                 <div class="nav-item dropdown">
+                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{uid.clname}}
+                            <div class="dropdown-menu">
+                                <a href="{%url 'profile'%}" class="dropdown-item">
+                                    <i class="ni ni-single-02"></i>
+                                    <span>My profile</span>
+                                </a>
+                                <a href="#!" class="dropdown-item">
+                                    <i class="ni ni-settings-gear-65"></i>
+                                    <span>Settings</span>
+                                </a>
+                                <a href="{% url 'add-event' %}" class="dropdown-item">
+                                    <i class="ni ni-calendar-grid-58"></i>
+                                    <span>Track order</span>
+                                </a>
+                                <a href="{% url 'all-event' %}" class="dropdown-item">
+                                    <i class="ni ni-support-16"></i>
+                                    <span>All Orders</span>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="{% url 'cllogout' %}" class="dropdown-item">
+                                    <i class="ni ni-user-run"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </div>}
+                  
+                </div>
                 
              </div>
          </div>

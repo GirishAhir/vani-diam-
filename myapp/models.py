@@ -26,3 +26,11 @@ class Event(models.Model):
     def __str__(self):
         return self.uid.name + "  >  " +self.etitle
 
+
+class product(models.Model):
+    pdname=models.CharField(max_length=300)
+    pdprice= models.IntegerField(default=25)
+    pddis=models.TextField(max_length=2000)
+    pdimage=models.FileField(upload_to='pdimage', null=True, blank=True)
+  
+

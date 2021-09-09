@@ -24,7 +24,6 @@
         <link href="{% static 'asset/css/style.css' %}" rel="stylesheet">
 
           <!-- login head-->
-
 <title>Login here</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,7 +34,6 @@
 
 <link rel="stylesheet" href="{% static 'asset/loginpg/css/style.css' %}">
 </head>
-
     <body class="page">
         <!-- Top Bar Start -->
         <div class="top-bar d-none d-md-block">
@@ -84,10 +82,7 @@
                     <div class="navbar-nav ml-auto">
                         <a href="{%url 'clhome'%}" class="nav-item nav-link">Home</a>
                         <a href="{%url 'clabout'%}" class="nav-item nav-link">About</a>
-                      
-                        <a href="{%url 'clregister'%}" class="nav-item nav-link active">register</a>
-                        
-                        
+                       <a href="{%url 'clregister'%}" class="nav-item nav-link active">register</a>
                         <a href="{%url 'clcontact'%}" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
@@ -97,34 +92,33 @@
 
 
         <!-- login Start -->
-        <body class="img js-fullheight" style="background-image: url({% static 'asset/loginpg/images/bg.jpg'%});">
+        <body class="img js-fullheight" style="background-image: url({% static'asset/loginpg/images/bg.jpg'%} )">
 			<section class="ftco-section">
 				<div class="container">
 					<div class="row justify-content-center">
 						<div class="col-md-6 text-center mb-5">
-							<h2 class="heading-section">Login Here</h2>
+							<h2 class="heading-section">Enter OTP Here</h2>
 						</div>
 					</div>
 					<div class="row justify-content-center">
 						<div class="col-md-6 col-lg-4">
 							<div class="login-wrap p-0">
-						  <h3 class="mb-4 text-center">Have an account?</h3>
-						  <form action="{% url 'cllogin' %}" class="signin-form" method="POST">   {% csrf_token %}
+						  <h3 class="mb-4 text-center">Please Enter below details</h3>
+						  <form action="{% url 'fpassword2' %}" class="signin-form" method="POST">   {% csrf_token %}
                             {% if msg %}
                             <div class="form-group">
                                 <small>{{msg}}</small>
                             </div>
                             {% endif %}
+                            <input type="hidden" name="email" value="{{email}}">
+                             <input type="hidden" name="otp" value="{{otp}}">
 
 							  <div class="form-group">
-                                 <input type="text" class="form-control" name='email' placeholder="Username" required>
+                                 <input type="text" class="form-control" name='uotp' placeholder="OTP" required>
 							  </div>
+					
 						<div class="form-group">
-						  <input id="password-field" name="password" type="password" class="form-control" placeholder="Password" required>
-						  <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
-						</div>
-						<div class="form-group">
-							<button type="submit" class="form-control btn btn-primary submit px-3" value = "login">LOGIN</button>
+							<button type="submit" class="form-control btn btn-primary submit px-3" value = "otp confirm">Submit</button>
 						</div>
                         
 						<div class="form-group d-md-flex">
@@ -134,16 +128,14 @@
 											  <span class="checkmark"></span>
 											</label>
 										</div>
-										<div class="w-50 text-md-right">
-											<a href="{% url 'clforgot1' %}" style="color: #fff">Forgot Password</a>
-										</div>
+										
 						</div>
 					  </form>
 					  <p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
 					  <div class="social d-flex text-center">
 						  <a href="#" class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Facebook</a>
 						  <a href="#" class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> Twitter</a>
-						  <a href="{%url 'clregister'%}"class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> New User ?</a>
+						  <a href="{%url 'register'%}"class="px-2 py-2 ml-md-1 rounded"><span class="ion-logo-twitter mr-2"></span> New User ?</a>
 					  </div>
 					  </div>
 						</div>

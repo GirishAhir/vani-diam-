@@ -1,5 +1,6 @@
 from django.db import models
 from django.db.models.fields import EmailField
+from django.http import request
 
 
 
@@ -16,6 +17,16 @@ class client(models.Model):
     role=models.CharField(default='client', max_length=50)
 
 
-def __str__(self):
-    return self.clname + ' :' + self.compname 
+    def __str__(self):
+        return self.clname + ' :' + self.compname 
+
+
+
+
+
+
+
+
+
+
 
