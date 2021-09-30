@@ -32,5 +32,8 @@ class product(models.Model):
     pdprice= models.IntegerField(default=25)
     pddis=models.TextField(max_length=2000)
     pdimage=models.FileField(upload_to='pdimage', null=True, blank=True)
+
+    def __str__(self):
+        return self.pdname
   
 

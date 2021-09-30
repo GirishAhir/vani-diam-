@@ -27,9 +27,8 @@ urlpatterns = [
     path('all-event/', views.all_event, name='all-event'),
     path('edit-event/<int:pk>', views.edit_event, name='edit-event'),
     path('delete-event/<int:pk>', views.delete_event, name='delete-event'),
-    path('add-pd', views.add_pd, name='add-pd')
+    path('add-pd/', views.add_pd, name='add-pd'),
+    path('single-pd/<int:pk>', views.single_pd, name='single-pd' )
 
-
-  
 
 ]

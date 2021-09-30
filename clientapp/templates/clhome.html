@@ -100,22 +100,6 @@
              <div class="navbar-nav ml-auto">
                  <a href="{%url 'clhome'%}"class="nav-item nav-link active">Home</a>
                  <a href="{%url 'clabout'%}" class="nav-item nav-link ">About</a>
-
-                {% if request.session.clemail %}
-
-                 <a href="{% url 'clcollection' %}"class="nav-item nav-link">collection</a>
-                 
-                 <div class="nav-item dropdown">
-                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                     <div class="dropdown-menu">
-                         <a href="{%url 'blog'%}" class="dropdown-item">Blog Page</a>
-                         <a href="{%url 'single'%}"class="dropdown-item">Single Page</a>
-                     </div>
-                 </div>
-                 <a href="{%url 'clcontact'%}" class="nav-item nav-link">Contact</a>
-
-                 {% endif %}
-                 
                  <a href="{% url 'clregister'%}" class="nav-item nav-link">Register</a>
                 
              </div>

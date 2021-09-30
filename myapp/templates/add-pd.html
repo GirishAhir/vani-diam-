@@ -6,9 +6,7 @@
 <br><br><br><br>
   <head>
 
-    {% if msg %}
-    {{msg}}
-    {% endif %}
+    
     <title>Add product form </title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
@@ -107,6 +105,9 @@
       </div>
       <form action="{% url 'add-pd' %}" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
+         {% if msg %}
+         <h3> {{ msg }} </h3>
+         {% endif %}
         <h1>Add New Product Here</h1>
         <div class="info">
           <input class="fname" type="text" name="pdname" placeholder="Product name ">

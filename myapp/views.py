@@ -66,7 +66,8 @@ def single(request):
     return render(request, "single.html")
 
 def collection(request):
-    return render(request, "collection.html")
+    products= product.objects.all()
+    return render(request, "collection.html" ,{ 'products':products})
 
 def dashboard(request):
     return render(request, "dashboard.html")
@@ -96,10 +97,10 @@ def fpassword1(request):
 
 
 def fpassword2(request):
+    otp=request.POST['otp']
+    email=request.POST['email']
     if request.method == "POST":
-        otp=request.POST['otp']
         uotp=request.POST['uotp']
-        email=request.POST['email']
         if otp == uotp:
             return render(request, 'fpassword3.html',{'email':email})
         else:
@@ -107,7 +108,7 @@ def fpassword2(request):
             return render(request,'fpassword2.html',{'msg':msg,'otp':otp, 'email': email})
 
     else:
-         return render(request, 'fpassword2.html',{'otp':otp, 'email':email})
+        return render(request, 'fpassword2.html',{'otp':otp, 'email':email})
 
 def fpassword3(request):
     if request.method == "POST":
@@ -269,7 +270,7 @@ def add_pd(request):
          
                 )
 
-        msg={"Product Added Succesfully"}
+        msg="Product Added Succesfully"
         return render(request, "add-pd.html", {'msg':msg, 'uid':uid})
     
     else: 
@@ -277,4 +278,6 @@ def add_pd(request):
 
 
 
-    
+def single_pd(request, pk):
+    prod= product.objects.get(id=pk)
+    return render(request, 'single-pd.html',{'products':prod})
