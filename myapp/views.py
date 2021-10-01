@@ -280,4 +280,6 @@ def add_pd(request):
 
 def single_pd(request, pk):
     prod= product.objects.get(id=pk)
+    print("#######################################################")
+    print(prod)
     return render(request, 'single-pd.html',{'products':prod})

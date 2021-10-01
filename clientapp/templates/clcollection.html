@@ -22,6 +22,24 @@
 
         <!-- Template Stylesheet -->
         <link href=" {% static 'asset/css/style.css' %}" rel="stylesheet">
+
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--enable mobile device-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--fontawesome css-->
+        <link rel="stylesheet" href="{% static 'asset/collection/css/font-awesome.min.css' %}">
+        <!--bootstrap css-->
+        <link rel="stylesheet" href="{% static 'asset/collection/css/bootstrap.min.css' %}">
+        <!--animate css-->
+        <link rel="stylesheet" href="{% static 'asset/collection/css/animate-wow.css' %}">
+        <!--main css-->
+        <link rel="stylesheet" href="{% static 'asset/collection/css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'asset/collection/css/bootstrap-select.min.css' %}">
+        <link rel="stylesheet" href="{% static 'asset/collection/css/slick.min.css' %}">
+        <!--responsive css-->
+        <link rel="stylesheet" href="{% static 'asset/collection/css/responsive.css' %}">
     </head>
 
     <body class="page">
@@ -95,139 +113,16 @@
 
 
 <br>
-
-
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <!--enable mobile device-->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!--fontawesome css-->
-      <link rel="stylesheet" href="{% static 'asset/collection/css/font-awesome.min.css' %}">
-      <!--bootstrap css-->
-      <link rel="stylesheet" href="{% static 'asset/collection/css/bootstrap.min.css' %}">
-      <!--animate css-->
-      <link rel="stylesheet" href="{% static 'asset/collection/css/animate-wow.css' %}">
-      <!--main css-->
-      <link rel="stylesheet" href="{% static 'asset/collection/css/style.css' %}">
-      <link rel="stylesheet" href="{% static 'asset/collection/css/bootstrap-select.min.css' %}">
-      <link rel="stylesheet" href="{% static 'asset/collection/css/slick.min.css' %}">
-      <!--responsive css-->
-      <link rel="stylesheet" href="{% static 'asset/collection/css/responsive.css' %}">
-   </head>
-   <body>
-   
       <!-- Modal -->
-      <div class="modal fade lug" id="myModal" role="dialog">
-         <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Change</h4>
-               </div>
-               <div class="modal-body">
-                  <ul>
-                     <li><a href="#"><img src="{% static 'asset/collection/images/flag-up-1.png' %}" alt="" /> United States</a></li>
-                     <li><a href="#"><img src="{% static 'asset/collection/images/flag-up-2.png' %}" alt="" /> France </a></li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div id="sidebar" class="top-nav">
-         <ul id="sidebar-nav" class="sidebar-nav">
-            <li><a href="#">Help</a></li>
-            <li><a href="howitworks.html">How it works</a></li>
-            <li><a href="#">chamb for Business</a></li>
-         </ul>
-      </div>
       <div class="page-content-product">
          <div class="main-product">
             <div class="container">
                <div class="row clearfix">
                   <div class="find-box">
-                     <h1>Find your next product or<br>business partner here.</h1>
-                     <h4>It has never been easier.</h4>
-                     <div class="product-sh">
-                        <div class="col-sm-6">
-                           <div class="form-sh">
-                              <input type="text" placeholder="Search something you love" >
-                           </div>
-                        </div>
-                        <div class="col-sm-3">
-                           <div class="form-sh">
-                              <select class="selectpicker">
-                                 <option>Textiles</option>
-                                 <option>Furniture</option>
-                                 <option>Leather</option>
-                              </select>
-                           </div>
-                        </div>
-                        <div class="col-sm-3">
-                           <div class="form-sh"> <a class="btn" href="#">Search</a> </div>
-                        </div>
-                        <p>Or simply<a href="#"> click here </a> and get inspired!</p>
-                     </div>
+                     <h1>Find Awesome diamonds here.</h1>
                   </div>
                </div>
                <div class="row clearfix">
-                  <div class="col-lg-3 col-sm-6 col-md-3">
-                     <a href="productpage.html">
-                        <div class="box-img">
-                           <h4>Product</h4>
-                           <img src="{% static 'asset/collection/images/product/1.jpg'%}" alt="" />
-                        </div>
-                     </a>
-                  </div>
-                  <div class="col-lg-3 col-sm-6 col-md-3">
-                     <a href="productpage.html">
-                        <div class="box-img">
-                           <h4>Product</h4>
-                           <img src="{% static 'asset/collection/images/product/2.jpg' %}" alt="" />
-                        </div>
-                     </a>
-                  </div>
-                  <div class="col-lg-3 col-sm-6 col-md-3">
-                     <a href="productpage.html">
-                        <div class="box-img">
-                           <h4>Product</h4>
-                           <img src="{% static 'asset/collection/images/product/4.jpg' %}" alt="" />
-                        </div>
-                     </a>
-                  </div>
-                  <div class="col-lg-3 col-sm-6 col-md-3">
-                     <a href="productpage.html">
-                        <div class="box-img">
-                           <h4>Product</h4>
-                           <img src="{% static 'asset/collection/images/product/5.jpg' %}" alt="" />
-                        </div>
-                     </a>
-                  </div>
-                  <div class="col-lg-3 col-sm-6 col-md-3">
-                     <a href="productpage.html">
-                        <div class="box-img">
-                           <h4>Product</h4>
-                           <img src="{% static 'asset/collection/images/product/10.jpg'%}" alt="" />
-                        </div>
-                     </a>
-                  </div>
-                  <div class="col-lg-3 col-sm-6 col-md-3">
-                     <a href="productpage.html">
-                        <div class="box-img">
-                           <h4>Product</h4>
-                           <img src="{% static 'asset/collection/images/product/11.jpg'%}" alt="" />
-                        </div>
-                     </a>
-                  </div>
-                  <div class="col-lg-3 col-sm-6 col-md-3">
-                     <a href="productpage.html">
-                        <div class="box-img">
-                           <h4>Product</h4>
-                           <img src="{% static 'asset/collection/images/product/12.jpg'%}" alt="" />
-                        </div>
-                     </a>
-                  </div>
                   <div class="col-lg-3 col-sm-6 col-md-3">
                      <a href="productpage.html">
                         <div class="box-img">
@@ -236,81 +131,13 @@
                         </div>
                      </a>
                   </div>
-                  <div class="categories_link">
-                     <a href="#">Browse all categories here</a>
-                  </div>
+                  
                </div>
             </div>
          </div>
       </div>
-      <div class="cat-main-box">
-         <div class="container">
-            <div class="row panel-row">
-               <div class="col-md-4 col-sm-6 wow fadeIn" data-wow-delay="0.0s">
-                  <div class="panel panel-default">
-                     <div class="panel-body">
-                        <img src="{% static 'asset/collection/images/xpann-icon.jpg'%}" class="icon-small" alt="">
-                        <h4>“Chamb” Your Business</h4>
-                        <p>Grow easily with chamb. Create free account.
-                           We help expanding your business easily.
-                        </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 col-sm-6 wow fadeIn" data-wow-delay="0.2s">
-                  <div class="panel panel-default">
-                     <div class="panel-body">
-                        <img src="{% static 'asset/collection/images/create-icon.jpg' %}" class="icon-small" alt="">
-                        <h4>Create and add</h4>
-                        <p>Grow easily with chamb. Create free account.
-                           We help expanding your business easily.
-                        </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 col-sm-6 wow fadeIn hidden-sm" data-wow-delay="0.4s">
-                  <div class="panel panel-default">
-                     <div class="panel-body">
-                        <img src="{% static 'asset/collection/images/get-icon.jpg'%}" class="icon-small" alt="">
-                        <h4>Get inspired</h4>
-                        <p>Grow easily with chamb. Create free account.
-                           We help expanding your business easily.
-                        </p>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="products_exciting_box">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-6 col-sm-6 wow fadeIn" data-wow-delay="0.2s">
-                  <div class="exciting_box f_pd">
-                     <img src="{% static 'asset/collection/images/exciting_img-01.jpg'%}" class="icon-small" alt="" />
-                     <h4>Explore <strong>exciting</strong> and exotic products
-                        tailored to you.
-                     </h4>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                        quis nostrud exercitation ullamco laboris..
-                     </p>
-                  </div>
-               </div>
-               <div class="col-md-6 col-sm-6 wow fadeIn" data-wow-delay="0.4s">
-                  <div class="exciting_box l_pd">
-                     <img src="{% static 'asset/collection/images/exciting_img-02.jpg'%}" class="icon-small" alt="" />
-                     <h4><strong>List your products on</strong> chamb and grow connections.</h4>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                        quis nostrud exercitation ullamco laboris..
-                     </p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      
+
+
       <div class="products">
          <div class="main-products">
             <h2>TRENDING PRODUCTS ON CHAMB</h2>
