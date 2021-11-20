@@ -136,16 +136,16 @@ https://www.tooplate.com/view/2114-pixie
               <div id="slider" class="flexslider">
                 <ul class="slides">
                   <li>
-                    <img src="{{ product.pdimage.url}}" />
+                    <img src="{{products.pdimage.url}}" width="233px" height="388px"/>
                   </li>
                   <li>
-                    <img src="{{ product.pdimage.url}}" />
+                    <img src="{{products.pdimage.url}}" width="233px" height="388px"" />
                   </li>
                   <li>
-                    <img src="{{ product.pdimage.url}}" />
+                    <img src="{{products.pdimage.url}} width="233px" height="388px"" />
                   </li>
                   <li>
-                    <img src="{{ product.pdimage.url}}" />
+                    <img src="{{products.pdimage.url}}" width="233px" height="388px"" />
                   </li>
                   <!-- items mirrored twice, total of 12 -->
                 </ul>
@@ -153,16 +153,16 @@ https://www.tooplate.com/view/2114-pixie
               <div id="carousel" class="flexslider">
                 <ul class="slides">
                   <li>
-                    <img src="{{ product.pdimage.id}}" />
+                    <img src="{{products.pdimage.url}}" width="233px" height="388px"" />
                   </li>
                   <li>
-                    <img src="{{ product.pdimage.id}}" />
+                    <img src="{{products.pdimage.url}} " width="233px" height="388px" />
                   </li>
                   <li>
-                    <img src="{{ product.pdimage.id}}" />
+                    <img src="{{products.pdimage.url}}" width="233px" height="388px"" />
                   </li>
                   <li>
-                    <img src="{{ product.pdimage.id}}" />
+                    <img src="{{products.pdimage.url}}" width="233px" height="388px"" />
                   </li>
                   <!-- items mirrored twice, total of 12 -->
                 </ul>
@@ -171,9 +171,9 @@ https://www.tooplate.com/view/2114-pixie
           </div>
           <div class="col-md-6">
             <div class="right-content">
-              <h4>Single Product Name</h4>
-              <h6>$55.00</h6>
-              <p>Proin commodo, diam a ultricies sagittis, erat odio rhoncus metus, eu feugiat lorem lacus aliquet arcu. Curabitur in gravida nisi, non placerat nibh. Praesent sit amet diam ultrices, commodo turpis id, dignissim leo. Suspendisse mauris massa, porttitor non fermentum vel, ullamcorper scelerisque velit. </p>
+              <h1>{{products.pdname}}</h1>
+              <h6>RS. {{products.pdprice}}</h6>
+              <p>{{products.pddis}} </p>
               <span>7 left on stock</span>
               <form action="" method="get">
                 <label for="quantity">Quantity:</label>
@@ -184,9 +184,6 @@ https://www.tooplate.com/view/2114-pixie
                 <input type="submit" class="button" value="Order Now!">
               </form>
               <div class="down-content">
-                <div class="categories">
-                  <h6>Category: <span><a href="#">Pants</a>,<a href="#">Women</a>,<a href="#">Lifestyle</a></span></h6>
-                </div>
                 <div class="share">
                   <h6>Share: <span><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-twitter"></i></a></span></h6>
                 </div>

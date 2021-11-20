@@ -70,7 +70,8 @@
                     <div class="navbar-nav ml-auto">
                         <a href="{%url 'clhome'%}"class="nav-item nav-link active">Home</a>
                         <a href="{%url 'clabout'%}" class="nav-item nav-link ">About</a>
-                        {% if request.session.clemail %}
+                        
+                        {% if uid.role == 'client' %}
                    
                         <a href="{%url 'clcollection'%}"class="nav-item nav-link">collection</a>
                     
@@ -84,9 +85,15 @@
                         <a href="{%url 'contact'%}" class="nav-item nav-link">Contact</a>
 
                         {%  endif %}
+
+                        
+                        {% if request.session.clemail %}
+
+                        <a href="{%url 'cllogout'%}" class="nav-item nav-link">Logout</a>
+                        {%  else %}
                         <a href="{%url 'cllogin'%}" class="nav-item nav-link">login</a>
                         <a href="{%url 'clregister'%}" class="nav-item nav-link">Register</a>
-                        
+                        {% endif %}
                     </div>
                 </div>
             </div>

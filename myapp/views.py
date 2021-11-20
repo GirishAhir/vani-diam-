@@ -6,6 +6,7 @@ from django.conf import settings
 from django.core.mail import send_mail
 from random import randrange
 
+
 from .models import User,Event, product
 
 
@@ -279,7 +280,6 @@ def add_pd(request):
 
 
 def single_pd(request, pk):
-    prod= product.objects.get(id=pk)
-    print("#######################################################")
-    print(prod)
-    return render(request, 'single-pd.html',{'products':prod})
+        prod= product.objects.get(id=pk)
+        print(prod)
+        return render(request, 'single-pd.html',{'products':prod})

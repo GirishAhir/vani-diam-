@@ -10,6 +10,7 @@ class User(models.Model):
     mobile=models.CharField(max_length=10)
     password=models.CharField(max_length=20)
     pic=models.FileField(upload_to='profile/', null=True,blank=True)
+    urole=models.CharField(default="Admin", max_length=50)
 
     def __str__(self):
         return self.name

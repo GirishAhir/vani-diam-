@@ -1,143 +1,125 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>VANI DIAM BV</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="VANI DIAM BV" name="keywords">
-        <meta content="VANI DIAM BV" name="description">
+{% extends 'clcommon.html' %}
+{% load static%}
+{% block content %}
 
-        <!-- Favicon -->
-        <link href="{% static 'asset/img/favicon.ico' %}" rel="icon">
-
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
-        
-        <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="{ % static 'asset/lib/animate/animate.min.css' % }" rel="stylesheet">
-        <link href= "{% static 'asset/lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
-
-        <!-- Template Stylesheet -->
-        <link href=" {% static 'asset/css/style.css' %}" rel="stylesheet">
+<br><br><br>
 
 
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <!--enable mobile device-->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--fontawesome css-->
-        <link rel="stylesheet" href="{% static 'asset/collection/css/font-awesome.min.css' %}">
-        <!--bootstrap css-->
-        <link rel="stylesheet" href="{% static 'asset/collection/css/bootstrap.min.css' %}">
-        <!--animate css-->
-        <link rel="stylesheet" href="{% static 'asset/collection/css/animate-wow.css' %}">
-        <!--main css-->
-        <link rel="stylesheet" href="{% static 'asset/collection/css/style.css' %}">
-        <link rel="stylesheet" href="{% static 'asset/collection/css/bootstrap-select.min.css' %}">
-        <link rel="stylesheet" href="{% static 'asset/collection/css/slick.min.css' %}">
-        <!--responsive css-->
-        <link rel="stylesheet" href="{% static 'asset/collection/css/responsive.css' %}">
-    </head>
-
-    <body class="page">
-        <!-- Top Bar Start -->
-        <div class="top-bar d-none d-md-block">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="top-bar-left">
-                            <div class="text">
-                                <i class="far fa-clock"></i>
-                                <h2>8:00 am - 6:00 pm</h2>
-                                <p>Mon - Fri</p>
-                            </div>
-                            <div class="text">
-                                <i class="fa fa-phone-alt"></i>
-                                <h2>+123 456 7890</h2>
-                                <p>For Appointment</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="top-bar-right">
-                            <div class="social">
-                                <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
-                                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Top Bar End -->
-
-        <!-- Nav Bar Start -->
-        <div class="navbar navbar-expand-lg bg-dark navbar-dark">
-            <div class="container-fluid">
-                <a href="{%url 'clhome'%}" class="navbar-brand">VANI DIAM </a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto">
-                        <a href="{%url 'clhome'%}"class="nav-item nav-link active">Home</a>
-                        <a href="{%url 'clabout'%}" class="nav-item nav-link ">About</a>
-                        {% if request.session.clemail %}
-                   
-                        <a href="{%url 'clcollection'%}"class="nav-item nav-link">collection</a>
-                    
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu">
-                                <a href="{%url 'blog'%}" class="dropdown-item">Blog Page</a>
-                                <a href="{%url 'single'%}"class="dropdown-item">Single Page</a>
-                            </div>
-                        </div>
-                        <a href="{%url 'clcontact'%}" class="nav-item nav-link">Contact</a>
-
-                        {%  endif %}
-                    
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Nav Bar End -->
-
-
-
-<br>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!--enable mobile device-->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--fontawesome css-->
+      <link rel="stylesheet" href="{% static 'asset/collection/css/font-awesome.min.css' %}">
+      <!--bootstrap css-->
+      <link rel="stylesheet" href="{% static 'asset/collection/css/bootstrap.min.css' %}">
+      <!--animate css-->
+      <link rel="stylesheet" href="{% static 'asset/collection/css/animate-wow.css' %}">
+      <!--main css-->
+      <link rel="stylesheet" href="{% static 'asset/collection/css/style.css' %}">
+      <link rel="stylesheet" href="{% static 'asset/collection/css/bootstrap-select.min.css' %}">
+      <link rel="stylesheet" href="{% static 'asset/collection/css/slick.min.css' %}">
+      <!--responsive css-->
+      <link rel="stylesheet" href="{% static 'asset/collection/css/responsive.css' %}">
+   </head>
+   <body>
+   
       <!-- Modal -->
+      
+   
+
       <div class="page-content-product">
          <div class="main-product">
             <div class="container">
                <div class="row clearfix">
-                  <div class="find-box">
-                     <h1>Find Awesome diamonds here.</h1>
-                  </div>
-               </div>
-               <div class="row clearfix">
+                <div class="row clearfix">
+                  {% for product in products %} 
                   <div class="col-lg-3 col-sm-6 col-md-3">
-                     <a href="productpage.html">
+                     <a href="#">
                         <div class="box-img">
                            <h4>Product</h4>
-                           <img src="{% static 'asset/collection/images/product/13.jpg'%}" alt="" />
+                           <img src="{{ product.pdimage.url }}" alt="image" height="250px" width="360px" />
                         </div>
                      </a>
+                     <a href="{% url 'clsingle-pd' product.id %}"><button> Show details </button></a>
                   </div>
-                  
+                  {% endfor %}
+               </div>    
+            </div>
+         </div>
+      </div>
+     </div>
+     
+     
+     <div class="cat-main-box">
+         <div class="container">
+            <div class="row panel-row">
+               <div class="col-md-4 col-sm-6 wow fadeIn" data-wow-delay="0.0s">
+                  <div class="panel panel-default">
+                     <div class="panel-body">
+                        <img src="{% static 'asset/collection/images/xpann-icon.jpg'%}" class="icon-small" alt="">
+                        <h4>“Chamb” Your Business</h4>
+                        <p>Grow easily with chamb. Create free account.
+                           We help expanding your business easily.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 col-sm-6 wow fadeIn" data-wow-delay="0.2s">
+                  <div class="panel panel-default">
+                     <div class="panel-body">
+                        <img src="{% static 'asset/collection/images/create-icon.jpg' %}" class="icon-small" alt="">
+                        <h4>Create and add</h4>
+                        <p>Grow easily with chamb. Create free account.
+                           We help expanding your business easily.
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 col-sm-6 wow fadeIn hidden-sm" data-wow-delay="0.4s">
+                  <div class="panel panel-default">
+                     <div class="panel-body">
+                        <img src="{% static 'asset/collection/images/get-icon.jpg'%}" class="icon-small" alt="">
+                        <h4>Get inspired</h4>
+                        <p>Grow easily with chamb. Create free account.
+                           We help expanding your business easily.
+                        </p>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>
       </div>
-
-
+      <div class="products_exciting_box">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6 col-sm-6 wow fadeIn" data-wow-delay="0.2s">
+                  <div class="exciting_box f_pd">
+                     <img src="{% static 'asset/collection/images/exciting_img-01.jpg'%}" class="icon-small" alt="" />
+                     <h4>Explore <strong>exciting</strong> and exotic products
+                        tailored to you.
+                     </h4>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                        quis nostrud exercitation ullamco laboris..
+                     </p>
+                  </div>
+               </div>
+               <div class="col-md-6 col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+                  <div class="exciting_box l_pd">
+                     <img src="{% static 'asset/collection/images/exciting_img-02.jpg'%}" class="icon-small" alt="" />
+                     <h4><strong>List your products on</strong> chamb and grow connections.</h4>
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                        quis nostrud exercitation ullamco laboris..
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      
       <div class="products">
          <div class="main-products">
             <h2>TRENDING PRODUCTS ON CHAMB</h2>
@@ -300,82 +282,4 @@
    </body>
 </html>
 
-<!-- Footer Start -->
-<div class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-7">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="footer-contact">
-                            <h2>Our Head Office</h2>
-                            <p><i class="fa fa-map-marker-alt"></i>Belgiëlei,  67,   bus 2, 2018 </p>
-                            <p><i class="fa fa-map-marker-alt"></i>Antwerpen, Belgium</p>
-                            <p><i class="fa fa-phone-alt"></i>+012 345 67890</p>
-                            <p><i class="fa fa-envelope"></i>info@example.com</p>
-                            <div class="footer-social">
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-youtube"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                                <a href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="footer-link">
-                            <h2>Quick Links</h2>
-                            <a href="">Terms of use</a>
-                            <a href="">Privacy policy</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5">
-                <div class="footer-newsletter">
-                    <h2>Newsletter</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet elit. Quisque eu lectus a leo dictum nec non quam. Tortor eu placerat rhoncus, lorem quam iaculis felis, sed lacus neque id eros.
-                    </p>
-                    <div class="form">
-                        <input class="form-control" placeholder="Email goes here">
-                        <button class="btn">Submit</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container copyright">
-        <div class="row">
-            <div class="col-md-6">
-                <p>&copy; <a href="#">VANI DIAM BV </a>, All Right Reserved.</p>
-            </div>
-            <div class="col-md-6">
-                <p>Designed By <a href="https://htmlcodex.com">Girish</a></p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Footer End -->
-
-<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-
-<!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-<script src="{% static 'asset/lib/easing/easing.min.js'%}"></script>
-<script src="{% static 'asset/lib/owlcarousel/owl.carousel.min.js' %}"></script>
-<script src="{% static 'asset/lib/waypoints/waypoints.min.js' %} "></script>
-<script src="{% static 'asset/lib/counterup/counterup.min.js' %}"></script>
-
-<!-- Contact Javascript File -->
-<script src="{% static 'asset/mail/jqBootstrapValidation.min.js' %}"></script>
-<script src="{% static 'asset/mail/contact.js' %}"></script>
-
-<!-- Template Javascript -->
-<script src=" {% static 'asset/js/main.js' %}"></script>
-</body>
-</html>
+{% endblock %}

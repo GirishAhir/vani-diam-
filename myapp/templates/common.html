@@ -61,19 +61,20 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-                <a href="{%url 'home'%}" class="navbar-brand">VANI DIAM </a>
+                <a href="{%url 'clhome'%}" class="navbar-brand">VANI DIAM </a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
+                        {% if uid.role == "Admin" %}
                         <a href="{%url 'home'%}"class="nav-item nav-link active">Home</a>
                         <a href="{%url 'about'%}" class="nav-item nav-link ">About</a>
-                        {% if request.session.email %}
+                      
                    
                         <a href="{%url 'collection'%}"class="nav-item nav-link">collection</a>
-                       {% endif %}
+                    
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu">
@@ -81,9 +82,15 @@
                                 <a href="{%url 'single'%}"class="dropdown-item">Single Page</a>
                             </div>
                         </div>
+                        <a href="{%url 'contact'%}" class="nav-item nav-link">Contact</a>
+                        {% endif %}
+
+
                         <a href="{%url 'login'%}" class="nav-item nav-link">login</a>
                         <a href="{%url 'register'%}" class="nav-item nav-link">Register</a>
-                        <a href="{%url 'contact'%}" class="nav-item nav-link">Contact</a>
+                       {% if request.session.email %}
+                       <a href="{%url 'logout'%}" class="nav-item nav-link">Logout</a>
+                       {% endif %}
                     </div>
                 </div>
             </div>

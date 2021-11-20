@@ -113,8 +113,10 @@
                  </div>
                  <a href="{%url 'clcontact'%}" class="nav-item nav-link">Contact</a>
 
-                 {% endif %}
+                 {% else %}
                  <a href="{% url 'clregister'%}" class="nav-item nav-link">Register</a>
+                    {% endif %}
+
                  <div class="nav-item dropdown">
                      <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{uid.clname}}
                             <div class="dropdown-menu">
@@ -139,7 +141,7 @@
                                     <i class="ni ni-user-run"></i>
                                     <span>Logout</span>
                                 </a>
-                            </div>}
+                            </div>
                   
                 </div>
                 
@@ -157,12 +159,8 @@
           <br><br>
           <br><br><br><br><br>
 
-          <div style="float: right; margin-right: 90px;" >
-          <ul class="section-btn">
-               <a href="{% url 'cllogin' %}" class="smoothScroll"><span data-hover="Client Login">Client Login </span></a>
-               <a href="{% url 'login' %}" class="smoothScroll"><span data-hover="Internal Login ">Internal Login </span></a>
-          </ul>
-          </div></div>
+     </div>
+     
      <div class="container">
               
           <div class="row">

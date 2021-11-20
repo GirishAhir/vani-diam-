@@ -17,6 +17,10 @@ urlpatterns = [
     path('clcollection/', views.clcollection, name='clcollection'),
     path('clforgot1/', views.clforgot1, name='clforgot1'),
     path('clforgot2/', views.clforgot2, name='clforgot2'), 
-    path('clforgot3/', views.clforgot3, name='clforgot3')
+    path('clforgot3/', views.clforgot3, name='clforgot3'),
+    path('clsingle-pd/<int:jk>', views.clsingle_pd, name='clsingle-pd' ),
+    path('cldash/', views.cldash, name='cldash'),
+    path('pay/', views.initiate_payment, name='pay'),
+    path('callback/',views.callback, name='callback'),
 
 ]
